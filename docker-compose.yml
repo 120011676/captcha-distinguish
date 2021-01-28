@@ -1,0 +1,8 @@
+services:
+  captcha-distinguish:
+    image: 120011676/captcha-distinguish
+    restart: always
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
