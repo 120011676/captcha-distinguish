@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController("distinguish")
-public class Distinguish {
+public class DistinguishController {
     @PostMapping("file")
     public List<String> file(MultipartFile[] files) throws IOException, TesseractException {
         var results = new ArrayList<String>();
