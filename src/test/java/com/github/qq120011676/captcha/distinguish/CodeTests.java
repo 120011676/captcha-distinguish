@@ -10,10 +10,10 @@ import java.util.ArrayList;
 public class CodeTests {
     public static void main(String[] args) {
         var filenames = new ArrayList<String>();
-        filenames.add("52JW.jpeg");
-        filenames.add("D11X.jpeg");
-        filenames.add("DUYA.jpeg");
-        String path = "code/";
+        filenames.add("52JW.png");
+        filenames.add("D11X.png");
+        filenames.add("DUYA.png");
+        String path = "/Users/say/Downloads/";
         ITesseract instance = new Tesseract();
         filenames.forEach(o -> {
             try {
