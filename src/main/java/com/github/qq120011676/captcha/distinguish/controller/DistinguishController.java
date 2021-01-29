@@ -17,9 +17,9 @@ public class DistinguishController {
     @PostMapping("file")
     public List<String> file(MultipartFile[] files) throws IOException, TesseractException {
         var results = new ArrayList<String>();
-        ITesseract instance = new Tesseract();
+        ITesseract iTesseract = new Tesseract();
         for (MultipartFile file : files) {
-            results.add(instance.doOCR(ImageIO.read(file.getInputStream())));
+            results.add(iTesseract.doOCR(ImageIO.read(file.getInputStream())));
         }
         return results;
     }

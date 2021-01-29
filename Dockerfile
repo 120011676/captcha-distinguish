@@ -5,7 +5,7 @@ ARG TZ=Asia/Shanghai
 RUN apk --update add tzdata && ln -sf /usr/share/zoneinfo/${TZ} /etc/localtime && echo ${TZ} > /etc/timezone
 RUN apk add tesseract-ocr
 WORKDIR /opt
-ENV TESSDATA_PREFIX=${WORKDIR}/tessdata
+ENV TESSDATA_PREFIX=${WORKDIR}
 COPY tessdata .
 ENV PROJECT_JAR_NAME=captcha-distinguish-0.0.1-SNAPSHOT.jar
 COPY build/libs/$PROJECT_JAR_NAME .
